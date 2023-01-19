@@ -18,18 +18,22 @@ To get started using TeX, you might look at the [LaTeX tutorial PDF chapter](htt
 
 In our recommended development workflow, you will write scripts in a text editor. Then you will run those scripts from your terminal (or the terminal on OSCER). You will want a capable text editor for developing your code. Many capable text editors exist, but I recommend any of the following:
 
-1. [Notepad++](https://notepad-plus-plus.org/) (for Windows users only)
-2. [Atom](https://atom.io)
-3. [Sublime Text 3](https://www.sublimetext.com)
-4. [Vim](https://www.vim.org/) (**Not** for beginners---comes built-in to Linux distributions)
+1. [VS Code](https://code.visualstudio.com/)
+2. [Notepad++](https://notepad-plus-plus.org/) (for Windows users only)
+3. [Atom](https://atom.io)
+4. [Sublime Text 3](https://www.sublimetext.com)
+5. [Vim](https://www.vim.org/) (**Not** for beginners---comes built-in to Linux distributions)
 
-Notepad++, Atom, and Vim are all completely free. A trial version of Sublime Text 3 is available for free, but a licensed version is $70 (US dollars). In the following subsections, I provide some of the details of each of these text editors.
+VS Code, Notepad++, Atom, and Vim are all completely free. A trial version of Sublime Text 3 is available for free, but a licensed version is $70 (US dollars). In the following subsections, I provide some of the details of each of these text editors.
 
 ### 2.1 Notepad++
+[VS Code](https://code.visualstudio.com/) is probably the most popular text editor in the world right now. It allows for user-written extensions that can dramatically improve workflows. It also has a nice RStudio-esque interface with different sections of the screen for editing code, interacting with a console or terminal, and viewing version control activity.
+
+### 2.2 Notepad++
 [Notepad++](https://notepad-plus-plus.org/) is an open source text editor developed for Windows users. It is the one that I "grew up" on. It has many nice features, including a souped-up "find and replace" as well as plugins that will align your code for you, easily format characters (e.g. converting lower case to upper case), and much more.
 
 
-### 2.2. Atom
+### 2.3 Atom
 
 [Atom](https://atom.io) is an open source text editor developed by people at GitHub.com. This editor has all the features of Sublime Text 3, but it also allows users full customizability. Further, it has been a while now that the users of Atom have surpassed the critical mass necessary to keep the editor progressing with the most cutting edge additions.
 
@@ -59,11 +63,11 @@ If using LaTex in this editor, the following packages are helpful:
 
 In addition, you will also want to download the [Skim](http://skim-app.sourceforge.net) PDF viewer to aid in displaying PDF files compiled from TeX with Atom.
 
-### 2.3 Sublime Text 3
+### 2.4 Sublime Text 3
 
 [Sublime Text 3](https://www.sublimetext.com) is the most widely used and versatile private software text editor. It has tremendous flexibility, as well as the polish of a piece of professional software. Sublime Text 3 will cost $70 for a license, although you can use a trial version indefinitely without charge while only having to suffer through frequent reminders to buy the full version.
 
-### 2.4 Vim
+### 2.5 Vim
 [Vim](https://www.vim.org/) is a text editor developed for users of Linux, and mainly optimized so that the user never has to touch the mouse to navigate. It is difficult to learn, but very powerful. When properly set up, it can do everything any other text editor can do.
 
 ## 3. Working in the Command Line
