@@ -148,11 +148,21 @@ Note: you may also do the following. From the terminal in RStudio, navigate to a
 \end{itemize}
 Once you have done this, issue a \texttt{git pull} from the location of your other local git repository (e.g. on RStudio on your personal computer). Verify that the PS2 directory appears in the appropriate place in your other local repository.
 
-\question Make sure that you have R version 4.0.2 installed on OSCER. To do this, type \texttt{nano \textasciitilde/.bash\_profile}. Type \texttt{module load R/4.0.2-foss-2020a} somewhere in the middle of that file. Then push Control+X and then type "yes" when it asks if you want to modify the file.
+\question Make sure that you have R version 4.0.2 (or higher) installed on OSCER. To do this, take the following steps:
+\begin{enumerate}
+    \item At the command prompt, type \texttt{nano \textasciitilde/.bash\_profile} and press enter. 
+    \item Type \texttt{module load R/4.0.2-foss-2020a} somewhere in the middle of that file. 
+    \item At the bottom of the file, type the following:
+        \begin{itemize}
+        \item type \texttt{eval "\$(ssh-agent -s)"}
+        \item type \texttt{ssh-add \~/.ssh/ghDS23}
+        \end{itemize}
+    \item Then push Control+X and then type ``yes'' (or ``y'') when it asks if you want to modify the file.
+\end{enumerate}
 
 \question Now open R (on OSCER), verify that it is running the version mentioned above, and install the \texttt{xml2} package by typing \texttt{install.packages('xml2')} at the command prompt. (\textbf{NOTE: The package is ``X-M-L 2,'' NOT ``X-M 12''}) Answer `yes' to install it in your home directory. Enter the number of any of the server mirrors that come up (I usually choose Texas). Building the package may take a couple of minutes. Once that has finished, repeat the process, but substitute \texttt{tidyverse} for \texttt{xml2}. Building \texttt{tidyverse} may take as much as 10-15 minutes. You don't need to watch it build, but be sure not to close your SSH terminal window or otherwise disconnect your session. When you are done with the build, exit R and log off of OSCER. You can always exit a program (or logout) on OSCER by typing Control+D.
 
-\question Update your fork of the class repository on both your personal laptop as well as on OSCER, since I'm been continuously updating things (and as part of PS1, everyone in the class submitted pull requests). The command to do this is \texttt{git pull upstream master}. A step-by-step help for how to do this is located \href{https://help.github.com/articles/syncing-a-fork/}{here}. More simply, you may also just go to your fork on GitHub and click the button that says ``Fetch upstream.''
+\question Update your fork of the class repository on both your personal laptop as well as on OSCER, since I'm been continuously updating things (and as part of PS1, everyone in the class submitted pull requests). The command to do this is \texttt{git pull upstream master}. A step-by-step help for how to do this is located \href{https://help.github.com/articles/syncing-a-fork/}{here}. More simply, you may also just go to your fork on GitHub and click the button that says ``Sync fork'' or ``Fetch upstream'' or similar.
 
 \end{questions}
 \end{document}
