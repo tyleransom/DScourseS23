@@ -96,6 +96,7 @@ Please follow these steps closely to allow SSH authentication on OSCER:
     \end{itemize}
     \item it should tell you ``Your identification has been saved in ghDS23'' and ``Your public key has been saved in ghDS23.pub'' and then print out some other stuff about a fingerprint and randomart image.
     \item type \texttt{cd \~}
+    \item type \texttt{eval "\$(ssh-agent -s)"}
     \item type \texttt{ssh-add \~/.ssh/ghDS23}
     \item in a web browser, visit \url{https://github.com/settings/keys} and click "new SSH key". Name it "OSCER"
     \item Copy the contents of your \texttt{ghDS23.pub} file and paste it into the key box. You can do this in a couple of ways:
