@@ -85,12 +85,12 @@ As with the previous problem sets, you will submit this problem set by pushing t
 \begin{questions}
 \question Log in to OSCER, change to the directory where you cloned your forked GitHub repository (probably \texttt{\textasciitilde/DScourseS23}), and make sure the OSCER version of your repository is synchronized with what is listed on GitHub by issuing a pull. That is, type \texttt{git pull origin master} from your OSCER \texttt{DScourseS23} folder. 
 
-\question Synchronize your fork with the class repository by doing a \texttt{git pull upstream master}. 
+\question Synchronize your fork with the class repository by either clicking the ``sync fork'' button on GitHub or by typing \texttt{git pull upstream master} from your terminal. 
 \begin{itemize}
 	\item Before doing this, make sure that you have set your default git text editor to Nano (and not Vim) by typing the following at the command line: \texttt{git config -{}-global core.editor "nano"}
 \end{itemize}
 
-\subsubsection*{Making your SLURM job scripts visible from any directory}
+\subsubsection*{Making your SLURM job scripts visible from any directory --- Note that we did this in class earlier in the semester so you may not need to do anything for this question}
 
 \question In class last week, you practiced running simple R or Python scripts on the OSCER cluster using the \texttt{Rbatch}, \texttt{Pythonbatch}, and \texttt{juliabatch} scripts located in the \texttt{SLURM/} folder of our course GitHub repository. Recall that the syntax for these commands was (assuming you are in the \texttt{SLURM/} directory): \texttt{./Rbatch rscript.R rscriptoutput.log 1:00 my-email@address.com}, where the ``\texttt{1:00}'' argument is a number indicating how long the job should run for.
 
@@ -106,7 +106,7 @@ Now, I'd like you to move these files to a place in your OSCER directory tree wh
     \end{enumerate}
 \end{enumerate}
 
-\subsubsection*{Making Spark executables visible from any directory}
+\subsubsection*{Making Spark executables visible from any directory --- again, we did this in class but please make sure you've got it set up properly}
 \question This follows a bit on the previous question. What you will now do is edit your \texttt{\textasciitilde/.bash\_profile} file to make it so you can simply type \texttt{sparkR} or \texttt{pyspark} to automatically open the Spark API of your choice.
 
 To do this, open in \texttt{nano} the \texttt{.bash\_profile} file which is located in your home directory.
@@ -122,9 +122,9 @@ Type \texttt{sparkR} at the command line and you should be able to use Spark's R
 \question This question will help you get comfortable working with (and converting from) JSON data, which is the most common data format for APIs that house web data.
 
 \begin{parts}
-    \part Download the following file from within R, Python, or Julia: \url{"https://www.vizgr.org/historical-events/search.php?format=json&begin_date=00000101&end_date=20230219&lang=en"}
+    \part Download the following file from within R, Python, or Julia: \url{"https://www.vizgr.org/historical-events/search.php?format=json&begin_date=00000101&end_date=20230209&lang=en"}
 
-    This website lists historical events from Jan 1, 0000 until Feb 19, 2023.
+    This website lists historical events from Jan 1, 0000 until Feb 9, 2023.
 
 	The way to do this is to call \texttt{wget} (which is a system command) from inside R/Python/Julia. Note that we want to specify the local name of this file (call it \texttt{dates.json}). To do that, we say \texttt{wget -O filename.extension "urlpath"} (note: that's a letter O, not a number 0; also pay attention to the quotation marks).
 
@@ -190,6 +190,8 @@ Also, note that the \texttt{fromJSON} and other functions can accept a URL as an
     \begin{enumerate}
         \item Re-execute the previous call, this time assigning \texttt{df2} to the output.
         \item Now use the \texttt{arrange()} function to sort the result ascending by species name: \texttt{df2 \%>\% arrange(Species) \%>\% head \%>\% print}
+            
+            \textbf{Note: } I got an error when using \texttt{arrange()} so you may not get this step to work
     \end{enumerate}
 \end{enumerate}
 
@@ -201,7 +203,7 @@ In another part of your .tex file, answer the questions raised in the various pa
 
 \question You should turn in the following files: .tex, .pdf,  and two .R scripts.  Make sure that these files each have the correct naming convention (see top of this problem set for directions) and are located in the correct directory (i.e. \texttt{\textasciitilde/DScourseS23/ProblemSets/PS4}).
 
-\question Synchronize your local git repository (in your OSCER home directory) with your GitHub fork by using the commands in Problem Set 2 (i.e. \texttt{git add}, \texttt{git commit -m ''message''}, and \texttt{git push origin master}). More simply, you may also just go to your fork on GitHub and click the button that says ``Fetch upstream.'' Then make sure to pull any changes to your local copy of the fork. Once you have done this, issue a \texttt{git pull} from the location of your other local git repository (e.g. on your personal computer). Verify that the PS4 files appear in the appropriate place in your other local repository.
+\question Synchronize your local git repository (in your OSCER home directory) with your GitHub fork by using the commands in Problem Set 2 (i.e. \texttt{git add}, \texttt{git commit -m ''message''}, and \texttt{git push origin master}). More simply, you may also just go to your fork on GitHub and click the button that says ``Sync fork'' or ``Fetch upstream.'' Then make sure to pull any changes to your local copy of the fork. Once you have done this, issue a \texttt{git pull} from the location of your other local git repository (e.g. on your personal computer). Verify that the PS4 files appear in the appropriate place in your other local repository.
 
 \end{questions}
 \end{document}
