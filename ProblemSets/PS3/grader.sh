@@ -30,7 +30,7 @@ for i in $(seq 1 17); do
         echo "sql file does not exist"
     fi
     
-    # 6 -- .tex file in PS2 folder
+    # 6 -- .tex file in PS3 folder
     if ls /home/ouecon${j}/DScourseS23/ProblemSets/PS3/*_*.tex 1> /dev/null 2>&1; then
         points=$((points + 5))
         tail /home/ouecon${j}/DScourseS23/ProblemSets/PS3/*_*.tex
@@ -40,7 +40,7 @@ for i in $(seq 1 17); do
         echo "tex file does not exist"
     fi
         
-    # 7 -- .pdf file in PS2 folder
+    # 7 -- .pdf file in PS3 folder
     if ls /home/ouecon${j}/DScourseS23/ProblemSets/PS3/*_*.pdf 1> /dev/null 2>&1; then
         points=$((points + 5))
     else
