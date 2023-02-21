@@ -47,7 +47,7 @@ for i in $(seq 1 17); do
         echo ""
         echo ""
     else
-        echo "No PS4a_* file"
+        echo "No PS4b_* file"
     fi
 
     # 7 -- .tex file in PS4 folder
