@@ -173,7 +173,7 @@ Note that both dependent and independent variables can be of these types
 
 ---
 # Linear Probabiliy Model vs. Logit
-```{r, lpm-graph, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+```{r, lpm-graph, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', out.width="52%", fig.retina=2}
 # Set random seed for reproducibility
 set.seed(123)
 
@@ -196,7 +196,7 @@ ggplot(data, aes(x, y)) +
     stat_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE, aes(color = "Logit"), linetype = "solid") +
     ylim(-0.05, 1.05) +
     labs(color = "Model", y = "y\n") +
-    scale_color_manual(values = c("forestgreen", "darkred"), labels = c("LPM", "Logit"))
+    scale_color_manual(values = c("forestgreen", "darkred"), labels = c("Logit", "LPM"))
 ```
 
 
