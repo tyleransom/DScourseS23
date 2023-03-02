@@ -1,5 +1,5 @@
 
-using JuMP, GLPK
+using JuMP, GLPK, CSV, DataFrames, Ipopt
 
 
 # wrap all of our code inside a function (for better performance)
@@ -37,7 +37,6 @@ end
 # call the function defined above
 example_basic()
 
-using JuMP, GLPK
 function example_sudoku()
     
     # input the initial puzzle board (0s mean blanks)
@@ -122,14 +121,15 @@ end
 sol = example_sudoku()
 print_sudoku_solution(sol)
 
-using HTTP, JuliaDB, JuMP, GLPK
 
 # first function: read in the player data from the class GitHub repository
 function read_in_data(url)
-    newtable  = csvread(IOBuffer(HTTP.get(url).body), skiplines_begin=0, header_exists=true)
-    players   = newtable[1][2]
-    salaries  = newtable[1][4]./1000000
-    ppg       = newtable[1][11]
+    local_file = "deleteme.csv"
+    CSV.download(url, local_file)
+    newtable = CSV.read(local_file, DataFrame)
+    players   = newtable[:,2]
+    salaries  = newtable[:,4]./1000000
+    ppg       = newtable[:,11]
     return players,salaries,ppg
 end
 
@@ -171,13 +171,15 @@ println("payroll: ",payroll)
 
 # first function: read in the player data from the class GitHub repository
 function read_in_data(url)
-    newtable = csvread(IOBuffer(HTTP.get(url).body), skiplines_begin=0, header_exists=true)
-    players  = newtable[1][2]
-    salaries = newtable[1][4]./1000000
-    mpg      = newtable[1][5]
-    fgaG5    = 1.0.*((newtable[1][9]).>5)
-    fga      = newtable[1][9]
-    ppg      = newtable[1][11]
+    local_file = "deletemetoo.csv"
+    CSV.download(url, local_file)
+    newtable = CSV.read(local_file, DataFrame)
+    players  = newtable[:,2]
+    salaries = newtable[:,4]./1000000
+    mpg      = newtable[:,5]
+    fgaG5    = 1.0.*((newtable[:,9]).>5)
+    fga      = newtable[:,9]
+    ppg      = newtable[:,11]
     return players,salaries,mpg,fgaG5,fga,ppg
 end
 
@@ -225,11 +227,12 @@ println("payroll: ",payroll)
 println("total shots per game: ",totshots)
 println("total minutes per game: ",total_minutes)
 
-using HTTP, JuliaDB, JuMP, Ipopt
 function import_auto(url)
-    newtable  = csvread(IOBuffer(HTTP.get(url).body), skiplines_begin=0, header_exists=true)
-    depvar    = log.(newtable[1][2]) # log price
-    indepvars = cat(ones(size(depvar)),newtable[1][3],newtable[1][5],newtable[1][6]; dims=2) # constant, mpg, headroom, trunk
+    local_file = "deletemethree.csv"
+    CSV.download(url, local_file)
+    newtable = CSV.read(local_file, DataFrame)
+    depvar    = log.(newtable[:,2]) # log price
+    indepvars = cat(ones(size(depvar)),newtable[:,3],newtable[:,5],newtable[:,6]; dims=2) # constant, mpg, headroom, trunk
     return depvar,indepvars
 end
 
