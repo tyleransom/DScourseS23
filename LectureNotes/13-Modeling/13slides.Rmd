@@ -172,6 +172,35 @@ Note that both dependent and independent variables can be of these types
 |            | ... |
 
 ---
+# Linear Probabiliy Model vs. Logit
+```{r, lpm-graph, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', out.width="52%", fig.retina=2}
+# Set random seed for reproducibility
+set.seed(123)
+
+# Generate data
+n <- 100 # number of observations
+x <- runif(n, 0, 5) # continuous variable x
+logit <- -4 + 3 * x # log-odds of y=1
+prob <- exp(logit) / (1 + exp(logit)) # probability of y=1
+y <- rbinom(n, 1, prob) # binary variable y
+
+# Create tibble
+data <- tibble(x, y)
+
+# Plot data with linear best-fit line and logistic regression "s-curve"
+ggplot(data, aes(x, y)) +
+    geom_point() +
+    theme_minimal() +
+    theme(legend.position = c(0.85, 0.3)) +
+    geom_smooth(method = "lm", se = FALSE, aes(color = "LPM"), linetype = "solid") +
+    stat_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE, aes(color = "Logit"), linetype = "solid") +
+    ylim(-0.05, 1.05) +
+    labs(color = "Model", y = "y\n") +
+    scale_color_manual(values = c("forestgreen", "darkred"), labels = c("Logit", "LPM"))
+```
+
+
+---
 # Ordered categorical (aka Ordinal) dep. variables
 
 - A variable is .hi[ordered categorical] if it takes on a finite (typically small) set of values 0, 1, ..., K and where .hi[order matters] (i.e. K > K-1 > K-2 > ... > 1 > 0)

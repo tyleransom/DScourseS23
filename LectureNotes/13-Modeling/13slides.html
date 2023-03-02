@@ -4,6 +4,7 @@
     <title>Lecture 13</title>
     <meta charset="utf-8" />
     <meta name="author" content="Tyler Ransom" />
+    <script src="13slides_files/header-attrs-2.14/header-attrs.js"></script>
     <link href="13slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="13slides_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="13slides_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -25,10 +26,18 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Lecture 13
+]
+.subtitle[
 ## Introduction to Statistical Modeling
+]
+.author[
 ### Tyler Ransom
+]
+.date[
 ### ECON 5253, University of Oklahoma
+]
 
 ---
 
@@ -177,6 +186,11 @@ Note that both dependent and independent variables can be of these types
 | naive Bayes classification | Artificial Neural Network (ANN) |
 |            | genetic programming (GP) |
 |            | ... |
+
+---
+# Linear Probabiliy Model vs. Logit
+&lt;img src="13slides_files/figure-html/lpm-graph-1.png" width="52%" style="display: block; margin: auto;" /&gt;
+
 
 ---
 # Ordered categorical (aka Ordinal) dep. variables
@@ -362,6 +376,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
