@@ -180,9 +180,9 @@ Suppose you get an error message. What do you do? Here's what I do.
 
 2. Classify the message as a syntax error or a logic error
 
-3. If syntax, look up what went wrong (e.g. documentation or Google)
+3. If syntax, look up what went wrong (e.g. documentation, web search, LLM chat bot)
 
-4. If logic, try to figure out what went wrong
+4. If logic, try to figure out what went wrong (and possibly ask LLM chat bot)
 
 
 ---
