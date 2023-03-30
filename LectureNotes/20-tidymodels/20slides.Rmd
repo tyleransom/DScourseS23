@@ -82,7 +82,7 @@ Take the 80% of your data that isn't the test set and randomly divide it into a 
 
 .center[
 ```{r echo = FALSE, fig.retina=1.3}
-knitr::include_graphics("../19-Intro-ML/k-foldCV.png")
+knitr::include_graphics("k-foldCV.png")
 ```
 ]
 
@@ -119,7 +119,7 @@ In Julia, [`MLJ.jl`](https://alan-turing-institute.github.io/MLJ.jl/dev/) is the
     
     - [`yardstick`](https://github.com/tidymodels/yardstick): for model evaluations 
     
-    - [`workflows`](https://github.com/tidymodels/workflows): for bundling a pieplne that bundles together pre-processing, modeling, and post-processing requests 
+    - [`workflows`](https://github.com/tidymodels/workflows): for bundling a pipeline that bundles together pre-processing, modeling, and post-processing requests 
 
 
 
@@ -302,6 +302,8 @@ sqrt(mean((housing_test_y$medv - ols_easy_predicted)^2))
 ```
 
 - But doing it the "roundabout" way will have dividends
+
+- Because we'll be able to have the computer automatically do the many different regressions we need it to
 
 
 ---
