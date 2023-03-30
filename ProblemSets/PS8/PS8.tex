@@ -105,7 +105,7 @@ As with the previous problem sets, you will submit this problem set by pushing t
     \item Now generate $Y$ which is a vector equal to $X\beta + \varepsilon$.
 \end{itemize}
 
-\question Using the matrices you just generated, compute $\hat{\beta}_{OLS}$, which is the OLS estimate of $\beta$ using the closed-form solution (i.e. compute $\hat{\beta}_{OLS} = \left(X^{\prime}X\right)^{-1}X^{\prime}y$). [HINT: check \href{https://www.statmethods.net/advstats/matrix.html}{here} for matrix algebra operations in R] How does your estimate compare with the true value of $\beta$ in \eqref{eq:1}?
+\question Using the matrices you just generated, compute $\hat{\beta}_{OLS}$, which is the OLS estimate of $\beta$ using the closed-form solution (i.e. compute $\hat{\beta}_{OLS} = \left(X^{\prime}X\right)^{-1}X^{\prime}Y$). [HINT: check \href{https://www.statmethods.net/advstats/matrix.html}{here} for matrix algebra operations in R] How does your estimate compare with the true value of $\beta$ in \eqref{eq:1}?
 
 \question Compute $\hat{\beta}_{OLS}$ using gradient descent (as we went over in class). Make sure you appropriately code the gradient vector! Set the ``learning rate'' (step size) to equal 0.0000003.
 
