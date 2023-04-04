@@ -242,19 +242,19 @@ Regularization of neural networks comes in three forms:
 
 
 ---
-# Deep Learning, GPT-3, and technological progress
+# Deep Learning, GPT-4, and technological progress
 
-- .hi[GPT-3] ("Generative Pre-trained Transformer 3") is the current state of the art neural net (as of early 2021)
+- .hi[GPT-4] ("Generative Pre-trained Transformer 4") is the current state of the art neural net (as of March 2023)
 
-- It is "an autoregressive language model that uses deep learning to produce human-like text" ([Wikipedia](https://en.wikipedia.org/wiki/GPT-3))
+- It is "an autoregressive language model that uses deep learning to produce human-like text" ([Wikipedia](https://en.wikipedia.org/wiki/GPT-4))
 
 - In 2012, the state of the art was AlexNet, which had 650,000 neurons and 60 million connections
 
-- GPT-3 has 100 million neurons and 175 billion connections
+- GPT-3 had 100 million neurons and 175 billion connections (GPT-4 details are unreleased)
 
 - The human brain has 100 billion neurons and 100 trillion connections
 
-- Cool podcast on AI developments: [here](https://80000hours.org/podcast/episodes/brian-christian-the-alignment-problem/)
+- Wolfram [explainer](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) on how GPTs work
 
 
 ---
