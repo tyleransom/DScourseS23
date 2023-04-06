@@ -642,7 +642,7 @@ In chess:
 
 - There are advanced mathematical techniques that simplify the number of states that need to be visited to find the path of maximum reward, but we won't cover these in this class 
 
-- If you're curious, Google "Bellman Equation"
+- If you're curious, have an LLM explain to you what a Bellman Equation is
 
 - There is also a lesson in life from this, in the following quote by S&oslash;ren Kierkegaard:
 > Life can only be understood backwards; but it must be lived forwards
@@ -669,6 +669,7 @@ In chess:
 
 - For example, the "3-point revolution" in the NBA came about because some teams realized that 3 points is more than 2 so that the expected reward can be greatly increased by attempting (and practicing) more 3-point shots
 
+- LLMs like GPT-4 greatly benefit from RLHF ([Reinforcement Learning with Human Feedback](https://huggingface.co/blog/rlhf))
 
 ---
 # Exploration-Exploitation
