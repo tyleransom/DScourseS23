@@ -139,7 +139,7 @@ Final grades will be assigned according to the standard cutoffs (90%+ for an A, 
 | Apr 27  | Th   | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | |
 | May 2   | T    | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | |
 | May 4   | Th   | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | [PS 12](https://raw.githack.com/tyleransom/DScourseS23/master/ProblemSets/PS12/PS12.pdf) |
-| May 8   | M    | Final Exam (in class, 1:30-3:30pm) | Final project due ([Scoresheet](https://raw.githack.com/tyleransom/DScourseS23/master/FinalProject/Scoresheet.pdf)) |
+| May 8   | M    | Final Exam (in class, 1:30-3:30pm) | Final project due by May 10 at 11:59pm ([Scoresheet](https://raw.githack.com/tyleransom/DScourseS23/master/FinalProject/Scoresheet.pdf)) |
 
 ## Helpful Links ##
 
